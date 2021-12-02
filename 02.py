@@ -26,15 +26,5 @@ for coor in lines:
 res1 = hor * dep1
 print(res1)
 
-# res2 = 0
-# hor = 0
-# dep = 0
-# aim = 0
-# for coor in lines:
-#     if coor[0] == 'forward':
-#         hor += int(coor[1])
-#     elif coor[0] == 'down':
-#     elif coor[0] == 'up':
-
 res2 = hor * dep2
 print(res2)
