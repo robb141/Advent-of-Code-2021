@@ -1,25 +1,11 @@
 import down
 import os
-from collections import deque, defaultdict, Counter
 
 with open(f'{os.path.basename(__file__).split(".")[0]}.txt', 'r') as my_f:
     lines = my_f.read().splitlines()
 
-# lines = '''5483143223
-# 2745854711
-# 5264556173
-# 6141336146
-# 6357385478
-# 4167524645
-# 2176841721
-# 6882881134
-# 4846848554
-# 5283751526'''.splitlines()
-print(lines)
-
 lines = [list(x) for x in lines]
 lines = [list(int(y) for y in x) for x in lines]
-print(lines)
 
 rows = len(lines)
 cols = len(lines[0])
@@ -47,18 +33,15 @@ while True:
         for r in range(rows):
             if any(True for c in lines[r] if c > 9):
                 ok = False
-                for j in range(cols):
-                    if lines[r][j] > 9:
-                        getNewGrid(r, j)
+                for c in range(cols):
+                    if lines[r][c] > 9:
+                        getNewGrid(r, c)
         if ok:
             break
     flashes += len(SEEN)
     if day == 100:
-        print(flashes)
+        print(f'Part 1: {flashes}')
     if len(SEEN) == rows * cols:
-        print(day)
+        print(f'Part 2: {day}')
         break
     day += 1
-
-
-
