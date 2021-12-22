@@ -1,3 +1,8 @@
 day 06, part2
 day 07, part2
 day 14, part2
+day 15, part1 and part2
+day 16, part1 and part2
+day 17, part1 and part2
+day 19, part1 and part2
+day 21, part2
